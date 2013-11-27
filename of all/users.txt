@@ -1,0 +1,17 @@
+create table users(
+	user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50),
+        password VARCHAR(50),
+        role VARCHAR(20),
+        name VARCHAR(20),
+        nationarity VARCHAR(20),
+        prefecture VARCHAR(20),
+        remain VARCHAR(50),
+        postcord INT(15),
+        postcord_remain INT(15),
+        job VARCHAR(20),
+        industry VARCHAR(20),
+        birthday VARCHAR(20),
+        sex INT(1),
+
+     ) engine=InnoDB;
