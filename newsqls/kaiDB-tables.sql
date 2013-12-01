@@ -47,6 +47,16 @@ create table courses(
 	index(id)
 )ENGINE=InnoDB;
 
+-- ロール情報administrators generals students graduates
+create table groups(
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(100) NOT NULL UNIQUE,
+	created DATETIME,
+	modified DATETIME,
+	index(id)
+)ENGINE=InnoDB;
+
+
 -- 基本情報 ログイン情報入り
 create table users(
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -181,13 +191,6 @@ create table certificates(
 	
 
 -- ACL用
-create table groups(
-	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-	name VARCHAR(100) NOT NULL UNIQUE,
-	created DATETIME,
-	modified DATETIME,
-	index(id)
-)ENGINE=InnoDB;
 
 CREATE TABLE acos (
   id INTEGER(10) UNSIGNED NOT NULL AUTO_INCREMENT,
